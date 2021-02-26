@@ -1,11 +1,8 @@
 import { Heading } from '@chakra-ui/react';
+import { Header } from '../components/Header';
 
 const Home: React.FC = () => {
-  return (
-    <Heading fontFamily="roboto" as="h1">
-      Hello World!
-    </Heading>
-  );
+  return <Header />;
 };
 
 export default Home;
