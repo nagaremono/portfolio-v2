@@ -67,7 +67,9 @@ export const projects: Project[] = [
       'Workbox',
       'Jasmine',
       'Webpack',
-      'HTML, CSS, JavaScript',
+      'HTML',
+      'CSS',
+      'JavaScript',
     ],
   },
   {
@@ -138,7 +140,9 @@ export const projects: Project[] = [
       'Workbox',
       'IndexedDB',
       'Webpack',
-      'HTML, CSS, JavaScript',
+      'HTML',
+      'CSS',
+      'JavaScript',
     ],
   },
   {
@@ -196,6 +200,6 @@ export const projects: Project[] = [
     deployment: `https://cat-browser-92bef.web.app/`,
     repository: 'https://github.com/nagaremono/cat-browser',
     screenshot: '/cat-app.png',
-    stack: ['HTML, CSS, JavaScript', 'Web Components'],
+    stack: ['HTML', 'CSS', 'JavaScript', 'Web Components'],
   },
 ];
