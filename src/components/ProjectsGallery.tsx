@@ -6,7 +6,7 @@ export const ProjectsGallery: React.FC = () => {
   return (
     <Grid>
       {projects.map((project) => (
-        <ProjectCard project={project} />
+        <ProjectCard key={project.id} project={project} />
       ))}
     </Grid>
   );
