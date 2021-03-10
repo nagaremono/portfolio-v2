@@ -1,5 +1,5 @@
 import { Project } from '../projects';
-import { Text, Box, Heading, Flex } from '@chakra-ui/react';
+import { Text, Box, Heading, Flex, Tag } from '@chakra-ui/react';
 import Image from 'next/image';
 
 interface ProjectCardProps {
@@ -19,7 +19,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         alt={`${project.name} screenshot`}
       />
       <Text fontFamily="roboto">{project.description.slice(0, 100)}</Text>
-      <Flex></Flex>
+      <Flex mt={2} wrap="wrap">
+        {project.stack.map((s) => {
+          return (
+            <Tag colorScheme="blackAlpha" variant="solid" mr={2} mb={2}>
+              {s}
+            </Tag>
+          );
+        })}
+      </Flex>
     </Box>
   );
 };
