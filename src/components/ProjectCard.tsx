@@ -20,9 +20,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       />
       <Text fontFamily="roboto">{project.description.slice(0, 100)}</Text>
       <Flex mt={2} wrap="wrap">
-        {project.stack.map((s) => {
+        {project.stack.map((s, idx) => {
           return (
-            <Tag colorScheme="blackAlpha" variant="solid" mr={2} mb={2}>
+            <Tag
+              key={`${idx}${s}`}
+              colorScheme="blackAlpha"
+              variant="solid"
+              mr={2}
+              mb={2}
+            >
               {s}
             </Tag>
           );
