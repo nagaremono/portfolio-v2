@@ -4,7 +4,7 @@ import { projects } from '../projects';
 
 export const ProjectsGallery: React.FC = () => {
   return (
-    <Grid>
+    <Grid rowGap={4}>
       {projects.map((project) => (
         <ProjectCard key={project.id} project={project} />
       ))}

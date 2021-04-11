@@ -15,14 +15,32 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   const toggleHover = () => setIsHover((prev) => !prev);
 
   return (
-    <Box width="90%" py={2} mx="auto">
-      <Heading as="h3" fontSize="xl" fontFamily="fira">
+    <Box
+      width="90%"
+      pb={2}
+      mx="auto"
+      boxShadow="2xl"
+      rounded="md"
+      border="2px"
+      borderColor="cyan.900"
+      backgroundColor="gray.700"
+      color="gray.100"
+    >
+      <Heading
+        as="h3"
+        fontSize="xl"
+        fontFamily="fira"
+        p={2}
+        backgroundColor="gray.700"
+        color="white"
+      >
         {project.name}
       </Heading>
       <Box
         onMouseEnter={toggleHover}
         onMouseLeave={toggleHover}
         position="relative"
+        mb={2}
       >
         <Box
           _hover={{
@@ -62,24 +80,27 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </Flex>
         )}
       </Box>
-      <Text fontFamily="roboto">
-        {project.description.slice(0, 100) + '...'}
-      </Text>
-      <Flex mt={2} wrap="wrap">
-        {project.stack.map((s, idx) => {
-          return (
-            <Tag
-              key={`${idx}${s}`}
-              colorScheme="blackAlpha"
-              variant="solid"
-              mr={2}
-              mb={2}
-            >
-              {s}
-            </Tag>
-          );
-        })}
-      </Flex>
+      <Box px={2}>
+        <Text fontFamily="roboto">
+          {project.description.slice(0, 100).trim() + '...'}
+        </Text>
+        <Flex mt={2} wrap="wrap">
+          {project.stack.map((s, idx) => {
+            return (
+              <Tag
+                key={`${idx}${s}`}
+                variant="solid"
+                mr={2}
+                mb={2}
+                backgroundColor="cyan.500"
+                color="black"
+              >
+                {s}
+              </Tag>
+            );
+          })}
+        </Flex>
+      </Box>
     </Box>
   );
 };
