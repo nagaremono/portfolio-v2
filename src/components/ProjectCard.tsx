@@ -42,11 +42,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         mb={2}
       >
         <Box
-          _hover={{
+          {...(isHover && {
             filter: 'brightness(40%)',
             transitionProperty: 'filter',
             transitionDuration: '0.3s',
-          }}
+          })}
           maxWidth="fit-content"
           mx="auto"
         >
