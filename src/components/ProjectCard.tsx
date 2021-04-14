@@ -16,7 +16,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
   return (
     <Box
-      width="90%"
       pb={2}
       mx="auto"
       boxShadow="2xl"
@@ -49,6 +48,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             transitionDuration: '0.3s',
           }}
           maxWidth="fit-content"
+          mx="auto"
         >
           <Image
             src={project.screenshot}
