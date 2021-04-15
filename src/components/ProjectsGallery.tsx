@@ -20,6 +20,7 @@ export const ProjectsGallery: React.FC = () => {
         justifyContent="center"
         mx={{ base: 4, sm: 6, md: 8, lg: 16 }}
         columnGap={{ base: 0, sm: 4, md: 12, xl: 16 }}
+        my={6}
       >
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
