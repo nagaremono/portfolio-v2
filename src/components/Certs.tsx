@@ -10,7 +10,7 @@ export const Certs: React.FC = () => {
         color="white"
         fontFamily="fira"
         fontSize={['xl', '2xl']}
-        px={[0, 2, 6, 12]}
+        px={[0, 2, 6, 16]}
       >
         Certificates
       </Heading>
@@ -19,6 +19,7 @@ export const Certs: React.FC = () => {
         flexDirection={['column', 'row']}
         justifyContent={{ sm: 'space-evenly' }}
         width={{ lg: '80%', xl: '75%', '2xl': '60%' }}
+        mx="auto"
         px={[4, 2]}
       >
         <Flex justifyContent="center" my={2} width={{ sm: '45%', md: '40%' }}>
