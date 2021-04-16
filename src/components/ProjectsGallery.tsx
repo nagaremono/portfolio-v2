@@ -1,8 +1,6 @@
-import { Flex, Grid } from '@chakra-ui/react';
-import { ProjectCard } from './ProjectCard';
+import { Grid } from '@chakra-ui/react';
 import { projects } from '../projects';
-import { ScrollToTop } from './ScrollToTop';
-import { BiArrowToTop } from 'react-icons/bi';
+import { ProjectCard } from './ProjectCard';
 
 export const ProjectsGallery: React.FC = () => {
   return (
@@ -26,9 +24,6 @@ export const ProjectsGallery: React.FC = () => {
           <ProjectCard key={project.id} project={project} />
         ))}
       </Grid>
-      <Flex justifyContent="center" my={4}>
-        <ScrollToTop as={BiArrowToTop} />
-      </Flex>
     </>
   );
 };
