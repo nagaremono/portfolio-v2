@@ -5,7 +5,7 @@ export const Greeting: React.FC = () => {
     <Box
       mx="auto"
       p={2}
-      width="clamp(35ch, 75%, 75ch)"
+      width="clamp(35ch, 75%, 60ch)"
       fontSize={['sm', 'md', 'lg']}
       my={4}
     >
