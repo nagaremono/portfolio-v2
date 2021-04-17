@@ -1,15 +1,15 @@
 import { Box, Flex, Heading } from '@chakra-ui/react';
-import Image from 'next/image';
 import React from 'react';
+import { CertImage } from './CertImage';
 
 export const Certs: React.FC = () => {
   const certsImages = [
     {
-      alt: 'Sertifikat Menjadi Front-End Developer Expert',
+      alt: 'Menjadi Front-End Web Developer Expert',
       src: '/expert-cert.jpg',
     },
     {
-      alt: 'Sertifikat Full Stack Open',
+      alt: 'Full Stack Open',
       src: '/fullstack.jpg',
     },
   ];
@@ -34,14 +34,7 @@ export const Certs: React.FC = () => {
         px={[4, 2]}
       >
         {certsImages.map(({ src, alt }) => (
-          <Flex
-            key={alt}
-            justifyContent="center"
-            my={2}
-            width={{ sm: '45%', md: '40%' }}
-          >
-            <Image width={350} height={245} alt={alt} src={src} />
-          </Flex>
+          <CertImage src={src} alt={alt} key={alt} />
         ))}
       </Flex>
     </Box>
