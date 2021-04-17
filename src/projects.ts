@@ -90,7 +90,7 @@ export const projects: Project[] = [
       `Structure backend response in a consumable format in front-end`,
       `Utilize the generated type from graphql code generator package`,
     ],
-    deployment: `https://karnivalapp.vercel.app/`,
+    deployment: `https://karnival.guruhedi.com/`,
     repository: `https://github.com/nagaremono/karnival-app`,
     screenshot: '/karnival-app.png',
 
