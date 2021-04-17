@@ -3,6 +3,17 @@ import Image from 'next/image';
 import React from 'react';
 
 export const Certs: React.FC = () => {
+  const certsImages = [
+    {
+      alt: 'Sertifikat Menjadi Front-End Developer Expert',
+      src: '/expert-cert.jpg',
+    },
+    {
+      alt: 'Sertifikat Full Stack Open',
+      src: '/fullstack.jpg',
+    },
+  ];
+
   return (
     <Box backgroundColor="gray.600" px={4} py={8} my={8}>
       <Heading
@@ -22,22 +33,16 @@ export const Certs: React.FC = () => {
         mx="auto"
         px={[4, 2]}
       >
-        <Flex justifyContent="center" my={2} width={{ sm: '45%', md: '40%' }}>
-          <Image
-            width={350}
-            height={245}
-            alt="Sertifikat Menjadi Front-End Developer Expert"
-            src="/expert-cert.jpg"
-          />
-        </Flex>
-        <Flex justifyContent="center" my={2} width={{ sm: '45%', md: '40%' }}>
-          <Image
-            width={350}
-            height={245}
-            alt="Sertifikat Full Stack Open"
-            src="/fullstack.jpg"
-          />
-        </Flex>
+        {certsImages.map(({ src, alt }) => (
+          <Flex
+            key={alt}
+            justifyContent="center"
+            my={2}
+            width={{ sm: '45%', md: '40%' }}
+          >
+            <Image width={350} height={245} alt={alt} src={src} />
+          </Flex>
+        ))}
       </Flex>
     </Box>
   );
